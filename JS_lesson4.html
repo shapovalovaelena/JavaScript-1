@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+ <script>
+  'use strict';
+  var a = +prompt('Введите первое значение: ');
+  var b = +prompt('Введите второе значение: ');
+  
+  function min(a, b) {
+    return (a < b) ? a : b;
+  }
+  
+  console.log(min(a, b));
+  
+</script>
+
+
+
+<script>
+  'use strict';
+  var str = prompt('Введите любую строку: ');
+  var char = prompt('Введите символ для поиска: ');
+  var count = 0;
+  function countChar(str, char) {
+    for(var i = 0; i < str.length; i++) {
+      if(str.charAt(i) == char) ++count;
+    }
+    return count;
+  }
+  
+  console.log('Символ ' + char + ' найден в введенной строке ' + countChar(str, char) + ' раз');
+  
+</script>

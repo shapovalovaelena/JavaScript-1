@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+
+<script>
+  'use strict';
+
+  var users = [
+  {
+    firstName: 'Ирина',
+    lastName: 'Скворцова',
+    birthday: '09.04.1984',
+    phones: [
+    '89023548741',
+    '89055788565'  
+    ]
+  },
+
+  {
+    firstName: 'Игорь',
+    lastName: 'Горбунов',
+    birthday: '21.12.1988',
+    phones: [
+    '89023587641'
+    ]
+  },
+
+  {
+    firstName: 'Елена',
+    lastName: 'Шаповалова',
+    birthday: '31.10.1984',
+    phones: [
+    '89023217642'
+    ]
+  },
+
+  ];
+
+  function addUser(user) {
+    var user = {};
+    user.firstName = prompt ('Введите имя: ');
+    user.lastName = prompt ('Введите фамилию: ');
+    user.birthday = prompt ('Введите дату рождения хх.хх.хххх: ');
+    user.phones = [];
+    while (true) {
+      var phone = prompt ('Введите номер телефона: (для выхода введите пустой номер) ');
+      if (!phone) break;
+      user.phones.push(phone);
+      }
+    users.push(user);
+  }
+    
+  addUser();
+    
+  for(var i = 0; i < users.length; i++) {
+   console.log('Имя: ' + users[i].firstName + ' Фамилия: ' + users[i].lastName + ' Дата рождения: ' + users[i].birthday + ' Телефон: ' + users[i].phones.join(', ') );
+  }
+  
+</script>
