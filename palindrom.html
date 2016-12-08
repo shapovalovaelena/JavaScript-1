@@ -3,7 +3,7 @@
   
   function isPalindrome(str){
     str = str.replace(/\s/g, "").replace(/\,/g, "").toLowerCase();
-    console.log((str.split("").reverse().join("") == str) ? "true" : "false");
+    return str.split("").reverse().join("") == str;
   }
   
   </script>
