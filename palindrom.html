@@ -2,8 +2,7 @@
 <script>
   
   function isPalindrome(str){
-    str = str.replace(/\s/g, "").replace(/\,/g, "").toLowerCase();
-    return str.split("").reverse().join("") == str;
+    str = str.replace(/[, ]/g, "").toLowerCase(); return str.split("").reverse().join("") == str;
   }
   
   </script>
